@@ -1,0 +1,13 @@
+/* This defines styles and classes used in the book */
+body { margin: 5%; text-align: justify; font-family: "Open Sans", "Liberation Sans", sans-serif; font-size: medium; }
+code { font-family: monospace; }
+h1 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
+h2 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
+h3 { text-align: left; "Open Sans", "Fira Sans", sans-serif; }
+h1.title { }
+h2.author { }
+h3.date { }
+ol.toc { padding: 0; margin-left: 1em; }
+ol.toc li { list-style-type: none; margin: 0; padding: 0; }
+img { vertical-align: middle; }
+div.figure { margin-left: auto; margin-right: auto; text-align: center; font-style: italic; }

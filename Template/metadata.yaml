@@ -1,0 +1,18 @@
+---
+cover-image: bookcover.jpg
+stylesheet: stylesheet.css
+title:
+- type: main
+  text: Book Template
+#- type: subtitle
+#  text: Dolor Sit Amet
+creator:
+- role: author
+  text: John Smith
+- role: editor
+  text: Sarah Jones
+identifier:
+- scheme: ISBN
+  text: 978-1-58836-849-2
+publisher:  My Press
+rights:  (c) 2007 John Smith, CC BY-NC
