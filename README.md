@@ -1,65 +1,46 @@
-BASC eBookGenerator is a script that creates EPUB and MOBI ebooks from Markdown pages, with all necessary pages, images, fonts, and CSS stylesheets kept in a source code folder.
+Pandoc PubKit is a bundle comprising an ebook compilation Bash shell script and an ebook template. The script compiles EPUB and MOBI ebooks from Markdown-formatted text files and accompanying images, fonts, and a CSS stylesheet.
 
-It was designed for use by the Bibliotheca Anonoma StoryCorps (BASC), to compile it's archived stories into ebooks into EPUB and MOBI format, for easy viewing on an ebook reader.
+## Description
 
-## Design
+The script uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format. The script also adds the following creature comforts that make the process of compiling ebook more effficient.
 
-The script supplements Pandoc's ability to convert Markdown pages into EPUB ebooks with the following features:
+* Dedicated directory for each ebook project. All ebook source files such as a configuration file, images, a stylesheet, and pages are stored in a separate directory.
+* Straightforward compilation process. The `compile-ebook.sh`script takes care of the entire ebook generation process.
+* Option to generate ebooks in the MOBI format using the Amazon KindleGEn utility.
 
-* Ebook Source Code Folders
-  * All necessary files, pages, and instructions for the eBook are kept in a single folder, just like a programmer would for the source code of a program.
-* One touch Makefile-style compilation.
-  * Once the ebook source code is set up, just run the script `./compile-ebook.sh` each time you want to build it. No extra arguments, updates, or thought needed.
-* Build multiple ebooks at once
-  * The included helper script, `./compile-all-epubs.sh` will instantly compile all ebook source code folders in the same folder as the script.
-* Automatically generate MOBI files for Amazon Kindle devices.
-  * Amazon Kindle devices are unable to read EPUB-format ebooks, only MOBI. This script has the option to use Amazon's KindleGen to convert EPUB into MOBI-format ebooks.
+## Requirements
 
-## Dependencies
+* Linux or Mac OS X
+* Bash shell
+* [Pandoc](http://johnmacfarlane.net/pandoc/) (1.12.2 or higher)
+* Optional [KindleGen](http://www.amazon.com/gp/feature.html?docId=1000765211)
 
-* **Linux or Mac OS X** - Windows with Cygwin may work, but is not recommended.
-* **Bash Shell** - The default command line in Linux and Mac OS X. Required to run the bash script.
-* [Pandoc](http://johnmacfarlane.net/pandoc/) (versions > 1.12.2) - Pandoc converts Markdown files into every single possible format for text to be presented in; including EPUB.
-  * **Version 1.12.2 or greater** of Pandoc is required, which introduces EPUB YAML metadata support. Make sure that you have such a version; Ubuntu Trusty 14.04 is the latest Ubuntu version with it.
-* [kindlegen](http://www.amazon.com/gp/feature.html?docId=1000765211) (optional) - Converts EPUB to Amazon Kindle compatible MOBI format.
+On Ubuntu 14.04, Pandoc 1.12.2 can be installed using the following command:
 
-If you're running Ubuntu 14.04, Pandoc 1.12.2 can be installed normally:
+	sudo apt-get install pandoc
 
-    sudo apt-get install pandoc
+On older version of Ubuntu, Pandoc 1.12.2 can be installed manually using Haskell Cabal:
 
-If you're using an Ubuntu version older than 14.04, install Pandoc 1.12.2 manually by using Haskell Cabal:
-
-    sudo apt-get install cabal-install
-    sudo cabal update
-    sudo cabal install pandoc --global
-
- `kindlegen` can be downloaded from here: <http://www.amazon.com/gp/feature.html?docId=1000765211>
+	sudo apt-get install cabal-install
+	sudo cabal update
+	sudo cabal install pandoc --global
 
 ## Usage
 
-Once Pandoc and Kindlegen is installed, use the Bash script `create-ebook.sh` to quickly build an ebook.
+To compile project files into an ebook in the EPUB format, run the *compile-ebook.sh* as follows:
 
-* `./compile-ebook.sh <ebook-folder>`
-* `./compile-ebook.sh <ebook-folder-1> <ebook-folder-2> ...`
-* `./compile-ebook.sh <ebook-folder> -k`
-* `./compile-ebook.sh <ebook-folder> -o <output-folder>`
-
-The included helper script `compile-all-epubs.sh` will find and compile every ebook folder, without having to provide folder names. It uses the same arguments as above, just omit `<ebook-folder>` .
+	./compile-ebook.sh "Book of Foo"
 
 ### Options
 
-* `-k` `--also-generate-kindle-mobi`
-  * (Requires KindleGen) Amazon Kindle devices are unable to read EPUB-format ebooks, only MOBI. This script has the option to use Amazon's KindleGen to convert EPUB into MOBI-format ebooks.
-* `-o --output-folder`
-  * By default, the EPUB file is placed into the ebook source folder. However, this can be somewhat inconvenient. Use this option to choose an output folder where the EPUBs should be placed. (will be created if folder does not exist)
+* `-k` `--also-generate-kindle-mobi` Generates an ebook in MOBI format (requires KindleGen)
+* `-o --output-folder` Specifies an alternative location for the generated files.
 
-### Example Ebook: "Lorem Ipsum"
+### Template
 
-Included with this script is an example ebook, called "Lorem Ipsum". Use this command to create it:
+Pandoc PubKit comes with an example ebook project called *Template*. To compile it, run the following command.
 
-    ./compile-ebook.sh "Lorem Ipsum"
-
-That example ebook implements all possible features of the script.
+    ./compile-ebook.sh "Template"
 
 ## Folder Structure
 
@@ -96,8 +77,6 @@ A typical structure for a large novel is shown below:
   * `LibreBaskerville-Regular.ttf`
   * `LibreBaskerville-Italic.ttf`
   * `LibreBaskerville-Bold.ttf`
-
-For a closer look, check out and mess with the example book included in this repository, `Lorem_Ipsum`.
 
 ## Components
 
