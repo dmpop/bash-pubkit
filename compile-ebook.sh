@@ -173,9 +173,9 @@ for EBOOK_FOLDER ; do
 
     # check if EPUB was created
     if [ -f "$EBOOK_FOLDER.epub" ]; then
-      echo $TAG "$EBOOK_FOLDER.epub built successfully."
+      echo $TAG "$EBOOK_FOLDER.epub compiled successfully."
     else
-      echo $TAG "Error: $EBOOK_FOLDER.epub not built."
+      echo $TAG "Error: $EBOOK_FOLDER.epub compilation failed."
     fi
 
     # Use kindlegen to create a MOBI file, sending kindlegen output to log file
@@ -187,12 +187,12 @@ for EBOOK_FOLDER ; do
 
         # check if MOBI was created
         if [ -f "$EBOOK_FOLDER.mobi" ]; then
-          echo $TAG "$EBOOK_FOLDER.mobi built successfully."
+          echo $TAG "$EBOOK_FOLDER.mobi compiled successfully."
         else
-          echo $TAG "Error: $EBOOK_FOLDER.mobi not built."
+          echo $TAG "Error: $EBOOK_FOLDER.mobi compilation failed."
         fi
       else
-        echo $TAG "Kindlegen is not installed, cannot generate MOBI..."
+        echo $TAG "KindleGen is not installed, cannot generate MOBI..."
       fi
     fi
 
