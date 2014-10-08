@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# BASC EBOOKGenerator
 # ./compile-epub.sh
 # Create EPUB and MOBI ebooks from Markdown pages, with all necessary pages,
 # images, fonts, and CSS stylesheets kept in a source code folder.
@@ -13,8 +12,9 @@ usage(){
 cat <<EOF
 $0 [OPTIONS] [FILES]
 
-BASC EBOOKGenerator: Create EPUB and MOBI ebooks from Markdown pages, with all
+Pandoc PubKit: Create EPUB and MOBI ebooks from Markdown pages, with all
 necessary pages, images, fonts, and CSS stylesheets kept in a source code folder.
+Pandoc PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator)
 
 Uses Pandoc and KindleGen as backends to generate EPUB and MOBI.
 
