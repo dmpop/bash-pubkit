@@ -5,7 +5,7 @@ Pandoc PubKit is a bundle comprising an ebook compilation Bash shell script and 
 The script uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format. The script also adds the following creature comforts that make the process of compiling ebook more effficient.
 
 * Dedicated directory for each ebook project. All ebook source files such as a configuration file, images, a stylesheet, and pages are stored in a separate directory.
-* Straightforward compilation process. The `compile-ebook.sh`script takes care of the entire ebook generation process.
+* Straightforward compilation process. The `compile-ebook.sh` script takes care of the entire ebook generation process.
 * Option to generate ebooks in the MOBI format using the Amazon KindleGEn utility.
 
 ## Requirements
