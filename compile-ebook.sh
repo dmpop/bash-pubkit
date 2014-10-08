@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # ./compile-epub.sh
-# Create EPUB and MOBI ebooks from Markdown pages, with all necessary pages,
-# images, fonts, and CSS stylesheets kept in a source code folder.
-# Uses Pandoc and KindleGen as backends to generate EPUB and MOBI.
+# The script compiles EPUB and MOBI ebooks from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
 
 ##-------------Functions----------------##
 
