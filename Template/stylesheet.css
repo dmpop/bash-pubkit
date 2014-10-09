@@ -1,13 +1,22 @@
-/* This defines styles and classes used in the book */
-body { margin: 5%; text-align: justify; font-family: "Open Sans", "Fira Sans", sans-serif; font-size: medium; }
-code { text-align: left; font-family: monospace; }
-h1 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
+/* Styles and classes used in the book */
+
+h1 { text-align: center; font-family: "Open Sans", "Fira Sans", sans-serif; }
 h2 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
 h3 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
-h1.title { }
-h2.author { }
-h3.date { }
 ol.toc { padding: 0; margin-left: 1em; }
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }
+
+body { text-align: justify; font-family: "Open Sans", "Fira Sans", sans-serif; font-size: medium; }
+code { text-align: left; font-family: monospace; }
+
 img { vertical-align: middle; max-width: 600px; }
 div.figure { margin-left: auto; margin-right: auto; text-align: center; font-style: italic; }
+
+#colophon { text-align: center; }
+
+table { border-collapse: collapse; border-spacing: 0; box-sizing: border-box; display: block; margin-bottom: 16px; margin-top: 0; overflow: auto; text-indent: 0; width: 100% }
+thead { box-sizing: border-box; display: table-header-group; vertical-align: middle }
+tr { background-color: #fff; box-sizing: border-box; display: table-row; vertical-align: inherit; border-top: #ccc solid 1px }
+th { box-sizing: border-box; display: table-cell; font-weight: bold; vertical-align: inherit; padding: 6px 13px; border: #ddd solid 1px }
+td { box-sizing: border-box; display: table-cell; text-align: inherit; vertical-align: inherit; padding: 6px 13px; border: #ddd solid 1px }
+tbody { box-sizing: border-box; display: table-row-group; vertical-align: middle }
