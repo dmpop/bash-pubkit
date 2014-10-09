@@ -3,7 +3,7 @@ body { margin: 5%; text-align: justify; font-family: "Open Sans", "Fira Sans", s
 code { text-align: left; font-family: monospace; }
 h1 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
 h2 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
-h3 { text-align: left; "Open Sans", "Fira Sans", sans-serif; }
+h3 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
 h1.title { }
 h2.author { }
 h3.date { }
