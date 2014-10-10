@@ -144,88 +144,38 @@ No subfolders are allowed in the *pages* directory.
 
 All the images embedded in the ebook, except for the cover image, must be placed in the *images*  directory. To insert an image into the text, use the following Markdown code:
 
-    ![](images/picture.jpg)
+    ![](images/foo.jpg)
 
-An image caption can be used, which will be displayed just below.
+    ![Caption goes here](images/foo.jpg)
 
-    ![This is a JPEG image.](images/picture.jpg)
+Sub-folders inside the *images* directory are allowed:
 
-Subfolders inside the images/ folder are allowed, as long as the images within are linked to correctly.
-
-For example, if the images/ folder has a subfolder diagrams/, which contains the image picture.jpg inside, use this Markdown syntax:
-
-    ![](images/diagrams/picture.jpg)
+    ![](images/illustrations/foo.jpg)
 
 In fact, complicated subfolder structures are allowed as long as the Markdown link reflects the location of the image.
 
     ![](images/diagrams/Snakes/Pythons/Burmese_Pythons/teeth.jpg)
 
-If the image is too big for the page, use the HTML image embed tag to set the height and width manually. Alternatively, save space and create a resized version with Photoshop, Imagemagick, or some other image editing utility.
+If the image is too large for the page, use the HTML image embed tag to set the height and width manually:
 
     <img src="smiley.jpg" width="42" height="42">
 
-If the text has to reflow around an image (float), use the HTML image embed tag. Set style="float:left" make the image float to the left of the text, and style="float:right" to make the image float to the right.
+If the text has to flow around an image (float), use the HTML image embed tag. Set *style="float:left"* to make the image float to the left of the text, and *style="float:right"* to make the image float to the right.
 
     <img src="smiley.gif" style="float:left">
 
-### cover.jpg or cover.png File (optional)
+### bookcover.jpg, bookcover.png
 
-> cover.jpg or cover.png is the image that will be used as the cover of the ebook.
+The cover image can be in either the JPEG or PNG format. Also, the cover file must reside in the root directory of the book project directory.
 
-The cover image can be either JPEG or PNG format. However, when switching formats, ensure that the filename in metadata.yaml has the correct extension.
+### stylesheet.css
 
-Also, ensure that the cover image is stored at the top of the EPUB source code folder, as shown in the folder structure below:
+The option *stylesheet.css* file controls the overall appearance and layout of book. If the *stylesheet.css* file does't exist, the compiler will use Pandoc's default stylesheet.
 
-* cover.jpg
-* metadata.yaml
-* pages
-  * 1-chapter-1.md
-  * 2-chapter-2.md
-* images/
-  * image1.jpg
+#### Font Family CSS
 
-If no cover image is needed, simply don't include one.
+To make a font face available, place the desired fonts files into the *fonts* directory, and add the following code to the *stylesheet.css* file (replace *DejaVuSans* with the actual font name): 
 
-### stylesheet.css File (optional)
-
-> Since EPUBs are based on web technologies, CSS can be used to spice up the font and formatting of the ebook. Just don't overdo it. Usually, *no changes are necessary.*
-
-The most that should be changed is the font face; if the book is written in a Unicode language that the ; or for stylistic
-
-Generally, leave the layout alone, since the ereader can change margins and such on it's own.
-
-### Default Pandoc CSS
-
-This is the basic CSS stylesheet used by Pandoc, which will be used if no stylesheet.css file is provided.
-
-It is almost always enough for most purposes.
-
-css
-    /* This defines styles and classes used in the book */
-    body { margin: 5%; text-align: justify; font-size: medium; }
-    code { font-family: monospace; }
-    h1 { text-align: left; }
-    h2 { text-align: left; }
-    h3 { text-align: left; }
-    h4 { text-align: left; }
-    h5 { text-align: left; }
-    h6 { text-align: left; }
-    h1.title { }
-    h2.author { }
-    h3.date { }
-    ol.toc { padding: 0; margin-left: 1em; }
-    ol.toc li { list-style-type: none; margin: 0; padding: 0; }
-
-
-### Font Family CSS
-
-To make a font face available, add the CSS code below to stylesheet.css. 
-
-Don't forget to place the actual .ttf font faces under the fonts/ folder (explained below).
-
-For example, the DejaVuSans font family is declared below:
-
-css
     @font-face {
     font-family: DejaVuSans;
     font-style: normal;
@@ -255,13 +205,6 @@ css
 
 [Source](http://www.pigsgourdsandwikis.com/2011/04/embedding-fonts-in-epub-ipad-iphone-and.html)
 
-### fonts/ Folder (optional)
+### fonts
 
-If .ttf fonts need to be embedded, create this folder and place the .ttf files inside. The script will automatically embed those fonts into the EPUB. Don't forget to declare the fonts in stylesheet.css (explained above).
-
-No subfolders are allowed in this folder.
-
-### Font Theming
-
-* **Libre Baskerville** - The default Serif font used. - [Google Web Fonts](http://www.google.com/fonts/specimen/Libre+Baskerville)
-* **Source Sans Pro** - The default Sans Serif font used. - [Google Web Fonts](https://www.google.com/fonts/specimen/Source+Sans+Pro)
+The *fonts* directory is used to store fonts embedded into the ebook. No sub-folders are allowed in this directory.
