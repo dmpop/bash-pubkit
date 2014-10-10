@@ -202,7 +202,6 @@ To make a font face available, place the desired fonts files into the *fonts* di
     }
     body { font-family: "DejaVuSans"; }
 
-
 [Source](http://www.pigsgourdsandwikis.com/2011/04/embedding-fonts-in-epub-ipad-iphone-and.html)
 
 ### fonts
