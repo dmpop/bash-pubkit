@@ -14,7 +14,7 @@ Pandoc PubKit: Create EPUB and MOBI ebooks from Markdown pages, with all
 necessary pages, images, fonts, and CSS stylesheets kept in a source code folder.
 Pandoc PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator)
 
-Uses Pandoc and KindleGen as backends to generate EPUB and MOBI.
+Uses Pandoc and Calibre to generate EPUB and MOBI files.
 
 Usage:
   $0 <ebook-folder>
@@ -24,17 +24,9 @@ Usage:
   $0 <ebook-folder> -k -o <output-folder>
 
 Options:
-  -k --also-generate-kindle-mobi  (Requires KindleGen) Amazon Kindle devices
-                                  are unable to read EPUB-format ebooks, only
-                                  MOBI. This script has the option to use 
-                                  Amazon's KindleGen to convert EPUB into MOBI-
-                                  format ebooks.
-  -o --output-folder=<folder>     By default, the EPUB file is placed into the
-                                  ebook source folder. However, this can be
-                                  somewhat inconvenient. Use this option to
-                                  choose an output folder where the EPUBs
-                                  should be placed. (will be created if folder
-                                  does not exist)
+  -k --also-generate-kindle-mobi  (Requires Calibre) Convert the compiled EPUB file
+                                  to the MOBI format for use with Amazon Kindle.
+  -o --output-folder=<folder>     Specify an alternative location for the generated ebook.
 EOF
   exit 1
 }
