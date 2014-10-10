@@ -176,12 +176,12 @@ for EBOOK_FOLDER ; do
       echo $TAG "Error: $EBOOK_FOLDER.epub compilation failed."
     fi
 
-    # Use kindlegen to create a MOBI file, sending kindlegen output to log file
+    # Use ebook-convert to create a MOBI file, sending the output to log file
     if [ "$COMPILE_KINDLE_MOBI" = true ] ; then
       LOG_FILE="$EBOOK_FOLDER.mobi.log"
 
-      if hash kindlegen 2>/dev/null; then
-        kindlegen "$EBOOK_FOLDER.epub" > $LOG_FILE
+      if hash ebook-convert 2>/dev/null; then
+        ebook-convert "$EBOOK_FOLDER.epub" "$EBOOK_FOLDER.mobi" > $LOG_FILE
 
         # check if MOBI was created
         if [ -f "$EBOOK_FOLDER.mobi" ]; then
@@ -190,7 +190,7 @@ for EBOOK_FOLDER ; do
           echo $TAG "Error: $EBOOK_FOLDER.mobi compilation failed."
         fi
       else
-        echo $TAG "KindleGen is not installed, cannot generate MOBI..."
+        echo $TAG "Calibre ebook-convert is not installed, unable to generate MOBI."
       fi
     fi
 

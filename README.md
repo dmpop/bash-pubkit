@@ -13,7 +13,7 @@ The script uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in
 * Linux or Mac OS X
 * Bash shell
 * [Pandoc](http://johnmacfarlane.net/pandoc/) (1.12.2 or higher)
-* Optional [KindleGen](http://www.amazon.com/gp/feature.html?docId=1000765211)
+* Optional [Calibre](http://calibre-ebook.com/)
 
 On Ubuntu 14.04, Pandoc 1.12.2 can be installed using the following command:
 
@@ -33,7 +33,7 @@ To compile project files into an ebook in the EPUB format, run the *compile-eboo
 
 ### Options
 
-* `-k` `--also-generate-kindle-mobi` Generates an ebook in MOBI format (requires KindleGen)
+* `-k` `--also-generate-kindle-mobi` Generates an ebook in the MOBI format (requires Calibre).
 * `-o --output-folder` Specifies an alternative location for the generated files.
 
 ### Template
@@ -49,7 +49,7 @@ The most basic structure for an ebook is shown below:
 * `metadata.yaml`
 * `cover.jpg`
 * `pages/`
-  * `1-everything.md`
+  * `book.md`
 
 A typical structure for a large novel is shown below:
 
@@ -111,9 +111,6 @@ Optionally, a `subtitle` could be also used as a subtype of `title`.
     - type: subtitle
       text: An investigation of metadata
 
-> **Note:** KindleGen will not convert an EPUB file with a subtitle, since subtitles are not supported in Kindle-readable MOBI.
-> When generating a MOBI ebook, comment out the subtitle entry (precede the lines with `#`), or remove those lines entirely.
-
 Give credit to contributors in this book under the `creator` entry.
 
     creator:
@@ -122,7 +119,7 @@ Give credit to contributors in this book under the `creator` entry.
     - role: editor
       text: Sarah Jones
 
-The last entries define the identifier, the publisher, and copyrights. These entries are only relevant if the book has been published.
+The last entries define the identifier, the publisher, and copyright. These entries are only relevant if the book has been published.
 
     identifier:
     - scheme: DOI
