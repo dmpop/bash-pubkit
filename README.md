@@ -208,3 +208,7 @@ To make a font face available, place the desired fonts files into the *fonts* di
 ### fonts
 
 The *fonts* directory is used to store fonts embedded into the ebook. No sub-folders are allowed in this directory.
+
+## mvdir Bash Shell Script
+
+The *mvdir.sh* Bash shell script dramatically simplifies the test of renaming multiple files, which can be useful if you need to rearrange pages. The script scans the specified path and opens a list of all found files and directories in a default text editor. Edit then the names, and the script automatically renames the modified files and directories when you close the editor.
