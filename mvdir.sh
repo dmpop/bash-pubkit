@@ -4,6 +4,8 @@
 # Created: 2002-07-21
 # Last update: 2012-12-06
 
+# http://dnr.im/tech/articles/mvdir/
+
 t1=`mktemp`
 t2=`mktemp`
 t3=`mktemp`
