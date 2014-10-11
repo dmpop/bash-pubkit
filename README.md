@@ -1,4 +1,4 @@
-Pandoc PubKit is a bundle comprising an ebook compilation Bash shell script and an ebook template. The script compiles EPUB and MOBI ebooks from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
+Pandoc PubKit is a tool set for compiling ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
 
 ## Description
 
