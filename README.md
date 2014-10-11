@@ -6,7 +6,7 @@ The script uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in
 
 * Dedicated directory for each ebook project. All ebook source files such as a configuration file, images, a stylesheet, and pages are stored in a separate directory.
 * Straightforward compilation process. The *compile-ebook.sh* script takes care of the entire ebook generation process.
-* Option to generate ebooks in the MOBI format using the Amazon KindleGEn utility.
+* Option to generate ebooks in the PDF and MOBI format using Calibre *ebook-convert* tool.
 
 ## Requirements
 
