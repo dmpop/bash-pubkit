@@ -2,7 +2,7 @@
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis tincidunt lectus, ac molestie ante elementum vitae. Nulla egestas mollis mauris tempus scelerisque. Maecenas pharetra rhoncus leo, et dignissim augue adipiscing at. Pellentesque lacinia magna in massa condimentum blandit. Donec dapibus eros quis sem malesuada mattis. Donec quis urna lobortis, tincidunt felis eget, sodales ante. Duis euismod feugiat porttitor. Maecenas ac massa faucibus, commodo nulla eu, rhoncus metus. Vestibulum ultricies sagittis tortor, at faucibus neque ornare sed. Donec eget nunc vehicula felis aliquet facilisis pellentesque vel sapien. Proin sit amet aliquet dui. Ut accumsan neque sit amet purus pharetra laoreet. Duis nec ultricies lorem. Vivamus sit amet lorem lorem. Nullam tempor, turpis nec cursus pulvinar, ante est elementum mi, sit amet consequat magna lacus ut ipsum. Sed eleifend sem eros, vel rhoncus metus euismod ut.
 
-![Fig. 1: Aliquam eleifend fermentum sapien](images/foo.png)
+![Fig. 1: Aliquam eleifend fermentum sapien](images/foo.jpg)
 
 Nulla quis purus vitae erat interdum dictum. Duis elementum, elit placerat luctus auctor, lacus nunc porttitor diam, ac rhoncus enim tortor in risus. Vivamus nec sem nibh. Quisque nec quam tristique, adipiscing justo sed, tincidunt orci. In sagittis sem sit amet lobortis lobortis. Sed ac nisi a nisl pulvinar accumsan. Maecenas at commodo purus. Fusce eu sem at nulla dignissim condimentum. Ut eget euismod diam. Praesent hendrerit ultrices libero at tincidunt. Ut consectetur quis mauris eu malesuada. In non erat eget urna posuere condimentum ut non sapien. Quisque rutrum semper diam vitae scelerisque. Sed nec venenatis nisl. 
 
