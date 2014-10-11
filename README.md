@@ -33,7 +33,8 @@ To compile project files into an ebook in the EPUB format, run the *compile-eboo
 
 ### Options
 
-* -k --also-generate-kindle-mobi Generates an ebook in the MOBI format (requires Calibre).
+* -m --generate-mobi Generates an ebook in the MOBI format (requires Calibre).
+* -p --generate-pdf Generates an ebook in the PDF format (requires Calibre).
 * -o --output-folder Specifies an alternative location for the generated files.
 
 ### Template
@@ -202,8 +203,6 @@ To make a font face available, place the desired fonts files into the *fonts* di
     }
     body { font-family: "DejaVuSans"; }
 
-[Source](http://www.pigsgourdsandwikis.com/2011/04/embedding-fonts-in-epub-ipad-iphone-and.html)
-
 ### fonts
 
 The *fonts* directory is used to store fonts embedded into the ebook. No sub-folders are allowed in this directory.
@@ -211,3 +210,15 @@ The *fonts* directory is used to store fonts embedded into the ebook. No sub-fol
 ## mvdir Bash Shell Script
 
 The *mvdir.sh* Bash shell script dramatically simplifies the test of renaming multiple files, which can be useful if you need to rearrange pages. The script scans the specified path and opens a list of all found files and directories in a default text editor. Edit then the names, and the script automatically renames the modified files and directories when you close the editor.
+
+## License
+
+Pandoc PubKit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
+
+Copyright (c) 2014 Dmitri Popov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

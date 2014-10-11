@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ./compile-epub.sh
-# The script compiles EPUB and MOBI ebooks from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
+# The script compiles ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
 
 ##-------------Functions----------------##
 
@@ -10,22 +10,26 @@ usage(){
 cat <<EOF
 $0 [OPTIONS] [FILES]
 
-Pandoc PubKit: Create EPUB and MOBI ebooks from Markdown pages, with all
+Pandoc PubKit: Compile ebooks in the EPUB, MOBI, and PDF formats from Markdown pages, with all
 necessary pages, images, fonts, and CSS stylesheets kept in a source code folder.
 Pandoc PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator)
 
-Uses Pandoc and Calibre to generate EPUB and MOBI files.
+Uses Pandoc and Calibre to generate EPUB, MOBI, and PDF files.
 
 Usage:
   $0 <ebook-folder>
   $0 <ebook-folder-1> <ebook-folder-2> ...
-  $0 <ebook-folder> -k
+  $0 <ebook-folder> -m
+  $0 <ebook-folder> -p
   $0 <ebook-folder> -o <output-folder>
-  $0 <ebook-folder> -k -o <output-folder>
+  $0 <ebook-folder> -m -o <output-folder>
+  $0 <ebook-folder> -m -p -o <output-folder>
 
 Options:
-  -k --also-generate-kindle-mobi  (Requires Calibre) Convert the compiled EPUB file
+  -m --generate-mobi              (Requires Calibre) Convert the compiled EPUB file
                                   to the MOBI format for use with Amazon Kindle.
+  -p --generate-pdf              (Requires Calibre) Convert the compiled EPUB file
+                                to the PDF format.
   -o --output-folder=<folder>     Specify an alternative location for the generated ebook.
 EOF
   exit 1
@@ -52,7 +56,7 @@ FONT_FOLDER="fonts"
 METADATA_FILE="metadata.yaml"
 
 # initial value
-COMPILE_KINDLE_MOBI=false
+COMPILE_MOBI=false
 OUTPUT_FOLDER=""
 
 # Announcement tag
@@ -61,7 +65,7 @@ TAG=" :: "
 ##-------------Getopt Setup----------------##
 
 # available options
-OPTS=`getopt -o ko: -l also-generate-kindle-mobi,output-folder: -- "$@"`
+OPTS=`getopt -o mpo: -l generate-mobi,generate-pdf,output-folder: -- "$@"`
 
 # display usage prompt and quit if no arguments
 [[ $# -eq 0 ]] && usage
@@ -70,8 +74,12 @@ eval set -- "$OPTS"
 
 while [ "$1" != "" ]; do
     case "$1" in
-        -k|--also-generate-kindle-mobi)
-            COMPILE_KINDLE_MOBI=true
+        -m|--generate-mobi)
+            COMPILE_MOBI=true
+            shift
+            ;;
+        -p|--generate-pdf)
+            COMPILE_PDF=true
             shift
             ;;
         -o|--output-folder)
@@ -169,7 +177,7 @@ for EBOOK_FOLDER ; do
     fi
 
     # Use ebook-convert to create a MOBI file, sending the output to log file
-    if [ "$COMPILE_KINDLE_MOBI" = true ] ; then
+    if [ "$COMPILE_MOBI" = true ] ; then
       LOG_FILE="$EBOOK_FOLDER.mobi.log"
 
       if hash ebook-convert 2>/dev/null; then
@@ -183,6 +191,24 @@ for EBOOK_FOLDER ; do
         fi
       else
         echo $TAG "Calibre ebook-convert is not installed, unable to generate MOBI."
+      fi
+    fi
+    
+    # Use ebook-convert to create a PDF file
+    if [ "$COMPILE_PDF" = true ] ; then
+      LOG_FILE="$EBOOK_FOLDER.pdf.log"
+
+      if hash ebook-convert 2>/dev/null; then
+        ebook-convert "$EBOOK_FOLDER.epub" "$EBOOK_FOLDER.pdf" > $LOG_FILE
+
+        # check if PDF was created
+        if [ -f "$EBOOK_FOLDER.pdf" ]; then
+          echo $TAG "$EBOOK_FOLDER.pdf compiled successfully."
+        else
+          echo $TAG "Error: $EBOOK_FOLDER.pdf compilation failed."
+        fi
+      else
+        echo $TAG "Calibre ebook-convert is not installed, unable to generate PDF."
       fi
     fi
 
