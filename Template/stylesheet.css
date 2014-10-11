@@ -1,8 +1,8 @@
 /* Styles and classes used in the book */
 
-h1 { text-align: center; font-family: "Open Sans", "Fira Sans", sans-serif; }
-h2 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
-h3 { text-align: left; font-family: "Open Sans", "Fira Sans", sans-serif; }
+h1 { text-align: center; font-family: "Open Sans", sans-serif; }
+h2 { text-align: left; font-family: "Open Sans", sans-serif; }
+h3 { text-align: left; font-family: "Open Sans", sans-serif; }
 ol.toc { padding: 0; margin-left: 1em; }
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }
 
