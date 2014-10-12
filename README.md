@@ -15,21 +15,25 @@ The key part of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell scri
 * [Pandoc](http://johnmacfarlane.net/pandoc/) (1.12.2 or higher)
 * Optional [Calibre](http://calibre-ebook.com/)
 
-On Ubuntu 14.04, Pandoc 1.12.2 can be installed using the following command:
+## Installation
 
-	sudo apt-get install pandoc
+To install Bash PubKit on Ubuntu 14.04 or later, use the supplied *install_bash-pubkit.sh* script by running the following commands:
 
-On older version of Ubuntu, Pandoc 1.12.2 can be installed manually using Haskell Cabal:
+    wget https://github.com/dmpop/bash-pubkit/raw/master/install_bash-pubkit.sh
+    chmod +x install_bash-pubkit.sh
+    ./install_bash-pubkit.sh
 
-	sudo apt-get install cabal-install
-	sudo cabal update
-	sudo cabal install pandoc --global
+On older version of Ubuntu, you need to install Pandoc 1.12.2 manually using Haskell Cabal:
+
+    sudo apt-get install cabal-install
+    sudo cabal update
+    sudo cabal install pandoc --global
 
 ## Usage
 
 To compile project files into an ebook in the EPUB format, run the *compile-ebook.sh* as follows:
 
-	./compile-ebook.sh "Book of Foo"
+    ./compile-ebook.sh "Book of Foo"
 
 ### Options
 

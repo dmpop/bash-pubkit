@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt-get update
 sudo apt-get install pandoc git
 git clone https://github.com/dmpop/pandoc-pubkit.git
 #Install Calibre

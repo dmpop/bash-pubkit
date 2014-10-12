@@ -58,7 +58,7 @@ COMPILE_MOBI=false
 OUTPUT_FOLDER=""
 
 # Announcement tag
-TAG=" :: "
+TAG=" >>> "
 
 ##-------------Getopt Setup----------------##
 
