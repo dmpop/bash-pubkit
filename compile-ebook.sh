@@ -10,11 +10,9 @@ usage(){
 cat <<EOF
 $0 [OPTIONS] [FILES]
 
-Pandoc PubKit: Compile ebooks in the EPUB, MOBI, and PDF formats from Markdown pages, with all
+Bash PubKit: Compile ebooks in the EPUB, MOBI, and PDF formats from Markdown pages, with all
 necessary pages, images, fonts, and CSS stylesheets kept in a source code folder.
-Pandoc PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator)
-
-Uses Pandoc and Calibre to generate EPUB, MOBI, and PDF files.
+Bash PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator) and uses Pandoc and Calibre to generate EPUB, MOBI, and PDF files.
 
 Usage:
   $0 <ebook-folder>

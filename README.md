@@ -1,8 +1,8 @@
-Pandoc PubKit is a tool set for compiling ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
+Bash PubKit is a tool set for compiling ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
 
 ## Description
 
-The key part of the Pandoc PubKit bundle is the *compile-ebook.sh* Bash shell script. The script uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format. The script offers the following features:
+The key part of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell script. The script uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format. The script offers the following features:
 
 * Dedicated directory for each ebook project. All ebook source files such as a configuration file, images, a stylesheet, and pages are stored in a separate directory.
 * Straightforward compilation process. The *compile-ebook.sh* script takes care of the entire ebook generation process.
@@ -39,7 +39,7 @@ To compile project files into an ebook in the EPUB format, run the *compile-eboo
 
 ### Template
 
-Pandoc PubKit comes with an example ebook project called *Template*. To compile it, run the following command:
+Bash PubKit comes with an example ebook project called *Template*. To compile it, run the following command:
 
     ./compile-ebook.sh "Template"
 
@@ -213,7 +213,7 @@ The *mvdir.sh* Bash shell script dramatically simplifies the test of renaming mu
 
 ## License
 
-Pandoc PubKit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
+Bash PubKit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
 
 Copyright (c) 2014 Dmitri Popov
 
