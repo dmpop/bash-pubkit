@@ -1,19 +1,20 @@
-Bash PubKit is a tool set for compiling ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
+## About Bash PubKit
 
-## Description
+Bash PubKit is a tool set for compiling ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. The key element of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
 
-The key part of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell script. The script uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format. The script offers the following features:
+## Bash PubKit Functionality
 
-* Dedicated directory for each ebook project. All ebook source files such as a configuration file, images, a stylesheet, and pages are stored in a separate directory.
+* Few dependencies, and easy deployment on Ubuntu using the provided installer script.
+* All ebook resources such as a configuration file, images, a stylesheet, and pages are stored in a separate directory, which makes it easier to manage individual ebook projects.
 * Straightforward compilation process. The *compile-ebook.sh* script takes care of the entire ebook generation process.
-* Option to generate ebooks in the PDF and MOBI format using Calibre *ebook-convert* tool.
+* Options to generate ebooks in the PDF and MOBI format using Calibre *ebook-convert* tool.
 
 ## Requirements
 
 * Linux or Mac OS X
 * Bash shell
 * [Pandoc](http://johnmacfarlane.net/pandoc/) (1.12.2 or higher)
-* Optional [Calibre](http://calibre-ebook.com/)
+* [Calibre](http://calibre-ebook.com/) (optional)
 
 ## Installation
 
@@ -37,26 +38,26 @@ To compile project files into an ebook in the EPUB format, run the *compile-eboo
 
 ### Options
 
-* -m --generate-mobi Generates an ebook in the MOBI format (requires Calibre).
-* -p --generate-pdf Generates an ebook in the PDF format (requires Calibre).
-* -o --output-folder Specifies an alternative location for the generated files.
+* `-m` (or `--generate-mobi`) generates an ebook in the MOBI format (requires Calibre)
+* `-p` (or `--generate-pdf`) generates an ebook in the PDF format (requires Calibre)
+* `-o` (or `--output-folder`) specifies an alternative location for the generated files
 
 ### Template
 
 Bash PubKit comes with an example ebook project called *Template*. To compile it, run the following command:
 
-    ./compile-ebook.sh "Template"
+    ./compile-ebook.sh Template
 
 ## Folder Structure
 
-The most basic structure for an ebook is shown below:
+A basic skeleton of an ebook is as follows:
 
 * metadata.yaml
 * cover.jpg
 * pages/
   * book.md
 
-A typical structure for a large novel is shown below:
+A long novel would typically have the following structure:
 
 * metadata.yaml
 * cover.png
@@ -85,11 +86,11 @@ A typical structure for a large novel is shown below:
 
 ## Book Parts
 
-Each book includes several key files and directories.
+Each book includes several key source files and directories.
 
 ### metadata.yaml
 
-The *metadata.yaml* file is a plain text YAML configuration file that specifies the title, author, and any identifiers of the book, as specified by the [Dublin Core Metadata Standard](http://dublincore.org/documents/dces/). It is also used to specify the filename of the cover image (either *bookcover.jpg* or *bookcover.png*) and an CSS stylesheet.
+The *metadata.yaml* file is a plain text YAML configuration file that specifies key book info: the title, author, and any identifiers of the book, as specified by the [Dublin Core Metadata Standard](http://dublincore.org/documents/dces/). It is also used to specify the file name of the cover image (either *bookcover.jpg* or *bookcover.png*) and an CSS stylesheet.
 
 The *cover-image* item defines the filename of the cover image to use. This cover image must be placed in the same folder as the *metadata.yaml* file
 
