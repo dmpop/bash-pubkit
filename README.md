@@ -2,9 +2,9 @@
 
 Bash PubKit is a tool set for compiling ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. The key element of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
 
-## Bash PubKit Functionality
+## Bash PubKit Features
 
-* Few dependencies, and easy deployment on Ubuntu using the provided installer script.
+* Few dependencies and easy deployment on Ubuntu using the provided installer script.
 * All ebook resources such as a configuration file, images, a stylesheet, and pages are stored in a separate directory, which makes it easier to manage individual ebook projects.
 * Straightforward compilation process. The *compile-ebook.sh* script takes care of the entire ebook generation process.
 * Options to generate ebooks in the PDF and MOBI format using Calibre *ebook-convert* tool.
@@ -53,14 +53,14 @@ Bash PubKit comes with an example ebook project called *Template*. To compile it
 A basic skeleton of an ebook is as follows:
 
 * metadata.yaml
-* cover.jpg
+* bookcover.jpg
 * pages/
   * book.md
 
 A long novel would typically have the following structure:
 
 * metadata.yaml
-* cover.png
+* bookcover.jpg
 * stylesheet.css
 * pages/
   * 0-foreword.md
@@ -72,7 +72,7 @@ A long novel would typically have the following structure:
   * and so on...
 * images/
   * snakes.jpg
-  * leaflet.png
+  * leaflet.jpg
   * diagrams/
     * figure_1.png
     * figure_2.png
@@ -94,7 +94,7 @@ The *metadata.yaml* file is a plain text YAML configuration file that specifies 
 
 The *cover-image* item defines the filename of the cover image to use. This cover image must be placed in the same folder as the *metadata.yaml* file
 
-    cover-image:  bookcover.png
+    cover-image:  bookcover.jpg
 
 If no cover image found, the ebook will be compiled without one.
 
