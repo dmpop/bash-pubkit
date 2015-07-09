@@ -128,8 +128,8 @@ The *identifier*, *publisher*, *copyright* items can be used to provide the key 
     identifier:
     - scheme: DOI
       text: doi:10.234234.234/33
-      publisher:  My Press
-      rights:  (c) 2007 John Smith, CC BY-NC
+    publisher:  My Press
+    rights:  (c) 2007 John Smith, CC BY-NC
 
 ### pages/
 
