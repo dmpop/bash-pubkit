@@ -110,12 +110,12 @@ The *title* item has two types. The *main* type specifies the main title of the 
     - type: main
       text: My Book
 
-The optional ssubtitle type can be used to specify the subtitle:
+The optional subtitle type can be used to specify the subtitle:
 
     - type: subtitle
       text: An investigation of metadata
 
-The *credit* item is use to specify author and contributors:
+The *creator* item is use to specify author and contributors:
 
     creator:
     - role: author
@@ -128,8 +128,8 @@ The *identifier*, *publisher*, *copyright* items can be used to provide the key 
     identifier:
     - scheme: DOI
       text: doi:10.234234.234/33
-    publisher:  My Press
-    rights:  (c) 2007 John Smith, CC BY-NC
+      publisher:  My Press
+      rights:  (c) 2007 John Smith, CC BY-NC
 
 ### pages/
 
