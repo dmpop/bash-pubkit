@@ -1,13 +1,13 @@
 ## About Bash PubKit
 
-Bash PubKit is a tool set for compiling ebooks in the EPUB, MOBI, and PDF formats from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. The key element of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
+Bash PubKit is a tool set for compiling ebooks in the EPUP and MOBI formats from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. The key element of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
 
 ## Bash PubKit Features
 
 * Few dependencies and easy deployment on Ubuntu using the provided installer script.
 * All ebook resources such as a configuration file, images, a stylesheet, and pages are stored in a separate directory, which makes it easier to manage individual ebook projects.
 * Straightforward compilation process. The *compile-ebook.sh* script takes care of the entire ebook generation process.
-* Options to generate ebooks in the PDF and MOBI format using Calibre *ebook-convert* tool.
+* Options to generate ebooks in the MOBI format using Calibre *ebook-convert* tool.
 
 ## Requirements
 
@@ -39,7 +39,6 @@ To compile project files into an ebook in the EPUB format, run the *compile-eboo
 ### Options
 
 * `-m` (or `--generate-mobi`) generates an ebook in the MOBI format (requires Calibre)
-* `-p` (or `--generate-pdf`) generates an ebook in the PDF format (requires Calibre)
 * `-o` (or `--output-folder`) specifies an alternative location for the generated files
 
 ### Template
@@ -216,7 +215,7 @@ The *fonts* directory is used to store fonts embedded into the ebook. No sub-fol
 
 Bash PubKit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
 
-Copyright (c) 2014 Dmitri Popov
+Copyright (c) 2015 Dmitri Popov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
