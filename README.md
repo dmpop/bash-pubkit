@@ -115,7 +115,7 @@ The optional subtitle type can be used to specify the subtitle:
     - type: subtitle
       text: An investigation of metadata
 
-The *creator* item is use to specify author and contributors:
+The *creator* item is used to specify author and contributors:
 
     creator:
     - role: author
