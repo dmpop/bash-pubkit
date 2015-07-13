@@ -10,9 +10,7 @@ usage(){
 cat <<EOF
 $0 [OPTIONS] [FILES]
 
-Bash PubKit: Compile ebooks in the EPUP and MOBI formats from Markdown pages, with all
-necessary pages, images, fonts, and CSS stylesheets kept in a source code folder.
-Bash PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator) and uses Pandoc and Calibre to generate EPUB, MOBI, and PDF files.
+Bash PubKit: Compile ebooks in the EPUB and MOBI formats from Markdown pages and accompanying images, fonts, and CSS stylesheets. Bash PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator) and uses Pandoc and Calibre to generate EPUB, MOBI, and PDF files.
 
 Usage:
   $0 <ebook-folder>
