@@ -1,53 +1,28 @@
 ## About Bash PubKit
 
-Bash PubKit is a tool set for compiling ebooks in the EPUP and MOBI formats from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. The key element of the Bash PubKit bundle is the *compile-ebook.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
-
-## Bash PubKit Features
-
-* Few dependencies and easy deployment on Ubuntu using the provided installer script.
-* All ebook resources such as a configuration file, images, a stylesheet, and pages are stored in a separate directory, which makes it easier to manage individual ebook projects.
-* Straightforward compilation process. The *compile-ebook.sh* script takes care of the entire ebook generation process.
-* Options to generate ebooks in the MOBI format using Calibre *ebook-convert* tool.
+Bash PubKit is a tool for compiling ebooks in the EPUB format from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. Bash PubKit comes with a book template and the *compile.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
 
 ## Requirements
 
-* Linux or Mac OS X
+* Linux or macOS X
 * Bash shell
 * [Pandoc](http://johnmacfarlane.net/pandoc/) (1.12.2 or higher)
-* [Calibre](http://calibre-ebook.com/) (optional)
 
 ## Installation
 
-To install Bash PubKit on Ubuntu 14.04 or later, use the supplied *install_bash-pubkit.sh* script by running the following commands:
-
-    wget https://github.com/dmpop/bash-pubkit/raw/master/install_bash-pubkit.sh
-    chmod +x install_bash-pubkit.sh
-    ./install_bash-pubkit.sh
-
-On older version of Ubuntu, you need to install Pandoc 1.12.2 manually using Haskell Cabal:
-
-    sudo apt-get install cabal-install
-    sudo cabal update
-    sudo cabal install pandoc --global
-
+- Install Pandoc: `sudo apt install pandoc` (Debian and Ubuntu), `sudo zypper in pandoc` (openSUSE)
+- Clone the project's Git repository: `https://gitlab.com/dmpop/bash-pubkit.git`
 ## Usage
 
-To compile project files into an ebook in the EPUB format, run the *compile-ebook.sh* as follows:
+To compile project files into an ebook in the EPUB format, switch to the _bash-pubkit_ directory and run the *compile.sh* as follows:
 
-    ./compile-ebook.sh "Book of Foo"
+    ./compile.sh /path/to/book/dir
 
-### Options
+## Template
 
-* `-m` (or `--generate-mobi`) generates an ebook in the MOBI format (requires Calibre)
-* `-o` (or `--output-folder`) specifies an alternative location for the generated files
+Bash PubKit comes with an example ebook project called *Template*.
 
-### Template
-
-Bash PubKit comes with an example ebook project called *Template*. To compile it, run the following command:
-
-    ./compile-ebook.sh Template
-
-## Folder Structure
+## Directory Structure
 
 A basic skeleton of an ebook is as follows:
 
@@ -143,7 +118,7 @@ The *pages* directory contains Markdown-formatted text file that comprise the bo
   * 004-chapter-4-part-quattro.md
   * 019-chapter-19-part-nineteen.md
 
-No subfolders are allowed in the *pages* directory.
+No subdirectories are allowed in the *pages* directory.
 
 ### images/
 
@@ -215,7 +190,7 @@ The *fonts* directory is used to store fonts embedded into the ebook. No sub-fol
 
 Bash PubKit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
 
-Copyright (c) 2015 Dmitri Popov
+Copyright (c) 2021 Dmitri Popov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
