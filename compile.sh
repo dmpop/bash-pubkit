@@ -69,7 +69,7 @@ for EBOOK_DIR; do
   # 1) Create a temporary copy of `metadata.yaml` with `.md` extension
   cp metadata.yaml metadata.md
   # 2) Append "..." to last line of `metadata.md`
-  sed -i '$ a ...' metadata.md
+  echo "..." >> metadata.md
 
   # Set arguments for Pandoc
   if [ "$CUSTOM_FONTS" = true ]; then
