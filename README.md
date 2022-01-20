@@ -1,6 +1,6 @@
-## About Bash PubKit
+## About Bash Pubkit
 
-Bash PubKit is a tool for compiling ebooks in the EPUB format from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. Bash PubKit comes with a book template and the *compile.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
+Bash Pubkit is a tool for compiling ebooks in the EPUB format from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. Bash Pubkit comes with a book template and the *compile.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
 
 ## Requirements
 
@@ -20,9 +20,9 @@ To compile project files into an ebook in the EPUB format, switch to the _bash-p
 
 ## Template
 
-Bash PubKit comes with an example ebook project called *Template*.
+Bash Pubkit comes with an example ebook project called *Template*.
 
-## Directory Structure
+## Directory structure
 
 A basic skeleton of an ebook is as follows:
 
@@ -58,7 +58,7 @@ A long novel would typically have the following structure:
   * LibreBaskerville-Italic.ttf
   * LibreBaskerville-Bold.ttf
 
-## Book Parts
+## Book parts
 
 Each book includes several key source files and directories.
 
@@ -188,9 +188,9 @@ The *fonts* directory is used to store fonts embedded into the ebook. No sub-fol
 
 ## License
 
-Bash PubKit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
+Bash Pubkit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
 
-Copyright (c) 2021 Dmitri Popov
+Copyright (c) 2022 Dmitri Popov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
