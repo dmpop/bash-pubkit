@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1536"
+   height="2304"
+   viewBox="0 0 406.39999 609.60002"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="bookcover.svg"
+   inkscape:export-filename="/home/dmpop/bookcover.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="488.5618"
+     inkscape:cy="1131.4286"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="2560"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,312.60002)">
+    <rect
+       style="fill:#440055;fill-opacity:1;stroke:none;stroke-width:0.41538116;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect815"
+       width="406.39999"
+       height="609.59998"
+       x="2.1798271e-06"
+       y="-312.60001" />
+    <path
+       style="fill:#c837ab;fill-opacity:1;stroke:none;stroke-width:0.33107227;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,-131.62502 c 0,0 50.715882,-30.84339 107.34525,-17.24418 56.62937,13.59923 114.46709,52.586677 193.52379,15.83963 C 361.08713,-161.02007 406.4,-155.99795 406.4,-155.99795 V -19.903862 H 0 Z"
+       id="rect821-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czscccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:33.79257202px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.84481424"
+       x="55.207054"
+       y="-223.6347"
+       id="text819"><tspan
+         sodipodi:role="line"
+         id="tspan817"
+         x="55.207054"
+         y="-223.6347"
+         style="letter-spacing:3.64530063px;fill:#ffffff;stroke-width:0.84481424">OPUS MAGNUM</tspan></text>
+    <path
+       style="fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:0.43460414;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,-114.23812 c 0,0 59.78731,-47.625 116.41668,-24.19048 56.62937,23.43453 119.75876,55.446424 179.91666,32.50596 64.83687,-24.72474 110.06665,-8.31548 110.06665,-8.31548 V 107.25593 H 0 Z"
+       id="rect821"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czscccc" />
+    <path
+       style="fill:#ffb380;fill-opacity:1;stroke:none;stroke-width:0.43460417;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,-48.630063 c 0,0 59.78731,-21.922619 116.41668,1.511901 56.62937,23.43453 91.78852,41.0833379 173.11308,46.86905524 C 358.74599,4.6751813 406.4,54.179461 406.4,54.179461 V 198.56638 H 0 Z"
+       id="rect821-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czscccc" />
+    <path
+       style="fill:#c87137;fill-opacity:1;stroke:none;stroke-width:0.43460417;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,107.25593 c 0,0 71.882546,-44.859688 128.51192,-21.425168 C 185.14129,109.26529 221.05639,50.562912 302.38095,56.34863 371.59719,61.27292 406.4,94.902204 406.4,94.902204 l 0,184.452396 H 0 Z"
+       id="rect821-3-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czscccc" />
+    <path
+       style="fill:#d40055;fill-opacity:1;stroke:none;stroke-width:0.43460417;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 2.1798271e-6,141.53225 C 2.1798271e-6,141.53225 71.882554,71.726137 128.51193,95.160654 185.1413,118.59518 236.17544,61.404712 317.49999,67.190432 386.71623,72.114722 406.4,112.54757 406.4,112.54757 v 184.4524 H 2.1798271e-6 Z"
+       id="rect821-3-6-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czscccc" />
+  </g>
+</svg>
