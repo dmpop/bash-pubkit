@@ -9,7 +9,7 @@ ol.toc li { list-style-type: none; margin: 0; padding: 0; }
 body { text-align: justify; font-family: "Open Sans", "Fira Sans", sans-serif; font-size: medium; }
 code { text-align: left; font-family: monospace; }
 
-img { vertical-align: middle; max-width: 600px; }
+img { margin-bottom: 0.5em;  vertical-align: middle; max-width: 100%; }
 div.figure { margin-left: auto; margin-right: auto; text-align: center; font-style: italic; }
 
 #colophon { text-align: center; }
