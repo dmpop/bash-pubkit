@@ -1,62 +1,58 @@
-## About Bash Pubkit
-
-Bash Pubkit is a tool for compiling ebooks in the EPUB format from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. Bash Pubkit comes with a book template and the *compile.sh* Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
+Bash Pubkit is a tool for compiling ebooks in the EPUB format from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. Bash Pubkit comes with a book template and the _compile.sh_ Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
 
 ## Requirements
 
-* Linux or macOS X
-* Bash shell
-* [Pandoc](http://johnmacfarlane.net/pandoc/) (1.12.2 or higher)
+- Linux, macOS, Windows with Windows Subsystem for Linux
+- [Pandoc](http://johnmacfarlane.net/pandoc/) (1.12.2 or higher)
 
 ## Installation
 
 - Install Pandoc: `sudo apt install pandoc` (Debian and Ubuntu), `sudo zypper in pandoc` (openSUSE)
-- Clone the project's Git repository: `https://gitlab.com/dmpop/bash-pubkit.git`
+- Clone the project's Git repository: `git clone https://github.com/dmpop/bash-pubkit.git`
+
 ## Usage
 
-To compile project files into an ebook in the EPUB format, switch to the _bash-pubkit_ directory and run the *compile.sh* as follows:
+To compile project files into an ebook in the EPUB format, switch to the _bash-pubkit_ directory and run the _compile.sh_ as follows:
 
     ./compile.sh /path/to/book/dir
 
-## Template
+## Book template
 
-Bash Pubkit comes with an example ebook project called *Template*.
+Bash Pubkit comes with an example ebook project called _Book template_.
 
 ## Directory structure
 
 A basic skeleton of an ebook is as follows:
 
-* metadata.yaml
-* bookcover.jpg
-* pages/
-  * book.md
+- metadata.yaml
+- bookcover.jpg
+- pages/
+  - book.md
 
-A long novel would typically have the following structure:
+A more complex book would typically have the following structure:
 
-* metadata.yaml
-* bookcover.jpg
-* stylesheet.css
-* pages/
-  * 0-foreword.md
-  * 00-prologue.md
-  * 1-chapter-1.md
-  * 2-chapter-2.md
-  * 3-chapter-3.md
-  * 4-chapter-4.md
-  * and so on...
-* images/
-  * snakes.jpg
-  * leaflet.jpg
-  * diagrams/
-    * figure_1.png
-    * figure_2.png
-  * portraits/
-    * author-portrait.jpg
-    * editor-portrait.jpg
-* fonts/
-  * LibreBaskerville-Regular.ttf
-  * LibreBaskerville-Italic.ttf
-  * LibreBaskerville-Bold.ttf
+- metadata.yaml
+- bookcover.jpg
+- stylesheet.css
+- pages/
+  - 0-foreword.md
+  - 00-prologue.md
+  - 1-chapter-1.md
+  - 2-chapter-2.md
+  - 3-chapter-3.md
+- images/
+  - figure1.jpg
+  - figure2.jpg
+  - diagrams/
+    - diagram1.png
+    - diagram2.png
+  - portraits/
+    - author-portrait.jpg
+    - editor-portrait.jpg
+- fonts/
+  - OpenSans-Regular.ttf
+  - OpenSans-Italic.ttf
+  - OpenSans-Bold.ttf
 
 ## Book parts
 
@@ -64,21 +60,21 @@ Each book includes several key source files and directories.
 
 ### metadata.yaml
 
-The *metadata.yaml* file is a plain text YAML configuration file that specifies key book info: the title, author, and any identifiers of the book, as specified by the [Dublin Core Metadata Standard](http://dublincore.org/documents/dces/). It is also used to specify the file name of the cover image (either *bookcover.jpg* or *bookcover.png*) and an CSS stylesheet.
+The _metadata.yaml_ file is a plain text YAML configuration file that specifies key book info: the title, author, and any identifiers of the book, as specified by the [Dublin Core Metadata Standard](http://dublincore.org/documents/dces/). It is also used to specify the file name of the cover image (either _bookcover.jpg_ or _bookcover.png_) and an CSS stylesheet.
 
-The *cover-image* item defines the filename of the cover image to use. This cover image must be placed in the same folder as the *metadata.yaml* file
+The _cover-image_ item defines the filename of the cover image to use. This cover image must be placed in the same folder as the _metadata.yaml_ file
 
     cover-image:  bookcover.jpg
 
-If no cover image found, the ebook will be compiled without one.
+If no cover image found, the ebook is compiled without one.
 
-The *stylesheet* item defines the name of the stylesheet used in the ebook:
+The _stylesheet_ item defines the name of the stylesheet used in the ebook:
 
     stylesheet:  stylesheet.css
 
 If the stylesheet  doesn't exist, the script uses Pandoc's default stylesheet.
 
-The *title* item has two types. The *main* type specifies the main title of the book:
+The _title_ item has two types. The _main_ type specifies the main title of the book:
 
     title:
     - type: main
@@ -89,7 +85,7 @@ The optional subtitle type can be used to specify the subtitle:
     - type: subtitle
       text: An investigation of metadata
 
-The *creator* item is used to specify author and contributors:
+The _creator_ item is used to specify author and contributors:
 
     creator:
     - role: author
@@ -97,7 +93,7 @@ The *creator* item is used to specify author and contributors:
     - role: editor
       text: Sarah Jones
 
-The *identifier*, *publisher*, *copyright* items can be used to provide the key information about the book if it has been already published:
+The _identifier_, _publisher_, _copyright_ items can be used to provide the key information about the book if it has been already published:
 
     identifier:
     - scheme: DOI
@@ -107,93 +103,84 @@ The *identifier*, *publisher*, *copyright* items can be used to provide the key 
 
 ### pages/
 
-The *pages* directory contains Markdown-formatted text file that comprise the book. All files must have the *.md* file extension. Note that pages are assembled in the numerical or or alphabetical order. And the best way to organize pages in the desired order is to use numerical prefixes as follows (the leading zeros ensures the correct order):
+The _pages_ directory contains Markdown-formatted text file that comprise the book. All files must have the _.md_ file extension. Note that pages are assembled in the numerical or alphabetical order. And the best way to organize pages in the desired order is to use numerical prefixes as follows (the leading zeros ensures the correct order):
 
-* pages/
-  * 0-foreword.md
-  * 00-prologue.md
-  * 001-chapter-1-the-beginning.md
-  * 002-chapter-2-the-second-part.md
-  * 003-chapter-3-the-third-part.md
-  * 004-chapter-4-part-quattro.md
-  * 019-chapter-19-part-nineteen.md
+- pages/
+  - 0-foreword.md
+  - 00-prologue.md
+  - 001-chapter-1-the-beginning.md
+  - 002-chapter-2-the-second-part.md
+  - 003-chapter-3-the-third-part.md
 
-No subdirectories are allowed in the *pages* directory.
+No subdirectories are allowed in the _pages_ directory.
 
 ### images/
 
-All the images embedded in the ebook, except for the cover image, must be placed in the *images*  directory. To insert an image into the text, use the following Markdown code:
+All the images embedded in the ebook, except for the cover image, must be placed in the _images_  directory. To insert an image into the text, use the following Markdown code:
 
-    ![](images/foo.jpg)
+```markdown
+![](images/foo.jpg)
+![Caption goes here](images/foo.jpg)
+```
 
-    ![Caption goes here](images/foo.jpg)
+Subdirectories inside the _images_ directory are allowed:
 
-Sub-folders inside the *images* directory are allowed:
-
-    ![](images/illustrations/foo.jpg)
-
-In fact, complicated subfolder structures are allowed as long as the Markdown link reflects the location of the image.
-
-    ![](images/diagrams/Snakes/Pythons/Burmese_Pythons/teeth.jpg)
+    ![](images/illustrations/illustration1.jpg)
 
 If the image is too large for the page, use the HTML image embed tag to set the height and width manually:
 
-    <img src="smiley.jpg" width="42" height="42">
+```html
+<img src="image1.jpg" width="42" height="42">
+```
 
-If the text has to flow around an image (float), use the HTML image embed tag. Set *style="float:left"* to make the image float to the left of the text, and *style="float:right"* to make the image float to the right.
+If the text has to flow around an image (float), use the HTML image embed tag. Set `style="float:left"` to make the image float to the left of the text, and `style="float:right"` to make the image float to the right.
 
-    <img src="smiley.gif" style="float:left">
+```html
+<img src="image1.gif" style="float:left">
+```
 
 ### bookcover.jpg, bookcover.png
 
-The cover image can be in either the JPEG or PNG format. Also, the cover file must reside in the root directory of the book project directory.
+The cover image can be in either the JPEG or PNG format. The cover file must reside in the root directory of the book project directory.
 
 ### stylesheet.css
 
-The option *stylesheet.css* file controls the overall appearance and layout of book. If the *stylesheet.css* file does't exist, the compiler will use Pandoc's default stylesheet.
+An optional _stylesheet.css_ file controls the overall appearance and layout of book. If the _stylesheet.css_ file doesn't exist, the compiler uses Pandoc's default stylesheet.
 
-#### Font Family CSS
+#### Font family CSS
 
-To make a font face available, place the desired fonts files into the *fonts* directory, and add the following code to the *stylesheet.css* file (replace *DejaVuSans* with the actual font name): 
+To make a font face available, place the desired fonts files into the _fonts_ directory, and add the following code to the _stylesheet.css_ file (replace _OpenSans_ with the actual font name): 
 
-    @font-face {
-    font-family: DejaVuSans;
-    font-style: normal;
-    font-weight: normal;
-    src:url("DejaVuSans-Regular.ttf");
-    }
-    @font-face {
-    font-family: DejaVuSans;
-    font-style: normal;
-    font-weight: bold;
-    src:url("DejaVuSans-Bold.ttf");
-    }
-    @font-face {
-    font-family: DejaVuSans;
-    font-style: italic;
-    font-weight: normal;
-    src:url("DejaVuSans-Oblique.ttf");
-    }
-    @font-face {
-    font-family: DejaVuSans;
-    font-style: italic;
-    font-weight: bold;
-    src:url("DejaVuSans-BoldOblique.ttf");
-    }
-    body { font-family: "DejaVuSans"; }
+```css
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url("OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: normal;
+  src: url("OpenSans-Italic.ttf");
+}
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: bold;
+  src: url("OpenSans-BoldItalic.ttf");
+}
+body {
+  font-family: "OpenSans";
+}
+```
 
 ### fonts
 
-The *fonts* directory is used to store fonts embedded into the ebook. No sub-folders are allowed in this directory.
-
-## License
-
-Bash Pubkit is based on [BASC-eBookGenerator](https://github.com/bibanon/BASC-eBookGenerator).
-
-Copyright (c) 2022 Dmitri Popov
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The _fonts_ directory is used to store fonts embedded into the ebook. No subdirectories are allowed in this directory.
