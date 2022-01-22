@@ -1,16 +1,31 @@
 #!/bin/bash
 
-# ./compile-epub.sh
-# The script compiles ebooks in the EPUB and MOBI formats from Markdown-formatted text files and accompanying images, fonts, and an CSS stylesheet.
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
 
-##-------------Functions----------------##
+# Author: Dmitri Popov, dmpop@linux.com
+# Source code: https://github.com/dmpop/bash-pubkit
+
+##-----Functions-----##
 
 # Usage prompt
 usage() {
   cat <<EOF
 $0 [DIR]
 
-Bash PubKit: Compile ebooks in the EPUB format from Markdown pages and accompanying images, fonts, and CSS stylesheets. Bash PubKit is based on BASC eBookGenerator (github.com/bibanon/BASC-eBookGenerator) and uses Pandoc to generate EPUB files.
+Bash Pubkit: Compiles Markdown pages and accompanying images, fonts, and CSS stylesheets into a book in the EPUB format.
 
 Usage:
   $0 <DIR>
@@ -19,86 +34,92 @@ EOF
   exit 1
 }
 
-##-------------Global variables----------------##
+##-----Global variables-----##
 
 # Directory structure
 PAGES_DIR="pages"
-IMAGE_DIR="images"
-FONT_DIR="fonts"
+IMAGES_DIR="images"
+FONTS_DIR="fonts"
 METADATA_FILE="metadata.yaml"
 
-# Announcement tag
+# Prompt tag
 TAG=" >>> "
 
 # Create EPUB for each specified directory
-for EBOOK_DIR; do
+for BOOK_DIR; do
 
-  ##-------------Sanits checks----------------##
+  ##-----Sanity checks-----##
+
+  # Check whether Pandoc is installed
+  if [ ! -x "$(command -v pandoc)" ]; then
+    echo "Make sure Pandoc is installed"
+    exit 1
+  fi
 
   # If the directory doesn't exist, skip it and continue
-  if [ ! -d "$EBOOK_DIR" ]; then
-    echo $TAG "$EBOOK_DIR not found, skipping..."
+  if [ ! -d "$BOOK_DIR" ]; then
+    echo $TAG "$BOOK_DIR not found, skipping..."
     continue
   fi
 
   # Check if the fonts directory exists
-  if [ -d "$EBOOK_DIR/$FONTS_DIR" ]; then
+  if [ -d "$BOOK_DIR/$FONTS_DIR" ]; then
     # Check if the fonts directory is empty
-    HAVE_FONTS=$(ls -A "$EBOOK_DIR/$FONTS_DIR")
-    if [ "$HAVE_FONTS" ]; then
+    FONT_CHECK=$(ls -A "$BOOK_DIR/$FONTS_DIR")
+    if [ "$FONT_CHECK" ]; then
       CUSTOM_FONTS=true
     else
       CUSTOM_FONTS=false
     fi
   fi
 
-  # Pandoc command must run in the ebook's directory
-  cd "$EBOOK_DIR"
+  # Pandoc command must run in the project directory
+  cd "$BOOK_DIR"
 
-  # If `metadata.yaml` doesn't exist (likely not EPUB folder)
+  # If metadata.yaml doesn't exist
   # return to original folder, skip it, and continue
   if [ ! -f $METADATA_FILE ]; then
-    echo $TAG "$METADATA_FILE not found in $EBOOK_DIR, skipping..."
+    echo $TAG "$METADATA_FILE not found in $BOOK_DIR, skipping..."
     cd ..
     continue
   fi
 
-  ##-------------Setting up the Pandoc Command----------------##
+  ##-----Setting up the Pandoc command-----##
 
-  # Format `metadata.yaml` for use with Pandoc
-  # 1) Create a temporary copy of `metadata.yaml` with `.md` extension
+  # Format metadata.yaml for use with Pandoc
+  # 1) Create a temporary copy of metadata.yaml with the .md` extension
   cp metadata.yaml metadata.md
-  # 2) Append "..." to last line of `metadata.md`
-  echo "..." >> metadata.md
+  # 2) Append "..." to last line of metadata.md
+  echo "..." >>metadata.md
 
   # Set arguments for Pandoc
   if [ "$CUSTOM_FONTS" = true ]; then
-    # Create Pandoc arguments to embed all fonts in the directory
+    # Create Pandoc arguments to embed all fonts in the fonts directory
     LIST_OF_FONTS=""
     shopt -s nullglob
-    for f in $FONT_DIR/*.ttf; do
+    for f in $FONTS_DIR/*.ttf; do
       LIST_OF_FONTS+="--epub-embed-font="
       LIST_OF_FONTS+=$f
       LIST_OF_FONTS+=" "
     done
     # Append arguments to the Pandoc command
-    EBOOK_TITLE=$(basename $EBOOK_DIR)
-    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$EBOOK_TITLE.epub" --toc $LIST_OF_FONTS
+    BOOK_TITLE=$(basename $BOOK_DIR)
+    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$BOOK_TITLE.epub" --toc $LIST_OF_FONTS
   else
-    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$EBOOK_TITLE.epub" --toc
+    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$BOOK_TITLE.epub" --toc
   fi
 
   # Check if EPUB was created
-  if [ -f "$HOME/$EBOOK_TITLE.epub" ]; then
+  if [ -f "$HOME/$BOOK_TITLE.epub" ]; then
     echo
-    echo $TAG "$EBOOK_TITLE.epub compiled successfully."
+    echo $TAG "$BOOK_TITLE.epub compiled successfully."
   else
-    echo $TAG "Compiling $EBOOK_TITLE.epub failed."
+    echo $TAG "Compiling $BOOK_TITLE.epub failed."
   fi
 
-  ##--------------------Cleanup-----------------------##
+  ##-----Cleanup-----##
 
-  # Delete `metadata.md` (`metadata.yaml` not affected)
+  # Delete metadata.md
   rm metadata.md
 
   # Return to the original directory
