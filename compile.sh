@@ -103,7 +103,7 @@ for BOOK_DIR; do
       LIST_OF_FONTS+=" "
     done
     # Append arguments to the Pandoc command
-    BOOK_TITLE=$(basename $BOOK_DIR)
+    BOOK_TITLE=$(basename "$BOOK_DIR")
     awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$BOOK_TITLE.epub" --toc $LIST_OF_FONTS
   else
     awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$BOOK_TITLE.epub" --toc
