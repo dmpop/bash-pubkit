@@ -1,8 +1,53 @@
 {
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#78a379",
+        "activityBar.activeBorder": "#d9d9e5",
+        "activityBar.background": "#78a379",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#d9d9e5",
+        "activityBarBadge.foreground": "#15202b",
+        "sash.hoverBorder": "#78a379",
+        "statusBar.background": "#5e8a5f",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#78a379",
+        "statusBarItem.remoteBackground": "#5e8a5f",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#5e8a5f",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#5e8a5f99",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#5e8a5f",
+    "kanban": {
+        "columns": {
+            "done": "Done",
+            "inProgress": "Work in progress",
+            "testing": "Language review",
+            "todo": "Plan"
+        }
+    },
     "workbench.colorTheme": "Nüshu",
-    "spellright.language": [],
+    "workbench.iconTheme": "material-icon-theme",
+    "spellright.language": [
+        "English (American)"
+    ],
     "spellright.documentTypes": [
+        "markdown",
         "latex",
         "plaintext"
+    ],
+    "todo-tree.general.tags": [
+        "IDEA",
+        "FIXME",
+        "TODO"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+        "orange",
+        "yellow",
+        "teal"
+    ],
+    "markdown.styles": [
+        "stylesheet.css"
     ]
 }

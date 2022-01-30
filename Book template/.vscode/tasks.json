@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "tasks": [
+        {
+            "label": "Compile EPUB",
+            "type": "shell",
+            "command": "${workspaceFolder}/run.sh",
+            "args": [
+                "${workspaceFolder}"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

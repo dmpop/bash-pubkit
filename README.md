@@ -1,4 +1,4 @@
-Bash Pubkit is a tool for compiling ebooks in the EPUB format from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. Bash Pubkit comes with a book template and the _compile.sh_ Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate ebook in the EPUB format.
+Bash Pubkit is a tool for compiling books in the EPUB format from Markdown-formatted text files and accompanying images, fonts, and CSS stylesheets. Bash Pubkit comes with a book template and the _compile.sh_ Bash shell script that uses [Pandoc](http://johnmacfarlane.net/pandoc/) to generate book in the EPUB format.
 
 ## Requirements
 
@@ -12,17 +12,17 @@ Bash Pubkit is a tool for compiling ebooks in the EPUB format from Markdown-form
 
 ## Usage
 
-To compile project files into an ebook in the EPUB format, switch to the _bash-pubkit_ directory and run the _compile.sh_ as follows:
+To compile project files into a book in the EPUB format, switch to the _bash-pubkit_ directory and run the _compile.sh_ as follows:
 
     ./compile.sh /path/to/book/dir
 
 ## Book template
 
-Bash Pubkit comes with an example ebook project called _Book template_.
+Bash Pubkit comes with a example book project called _Book template_.
 
 ## Directory structure
 
-A basic skeleton of an ebook is as follows:
+A basic skeleton of a book is as follows:
 
 - metadata.yaml
 - bookcover.jpg
@@ -66,13 +66,13 @@ The _cover-image_ item defines the filename of the cover image to use. This cove
 
     cover-image:  bookcover.jpg
 
-If no cover image found, the ebook is compiled without one.
+If no cover image found, the book is compiled without one.
 
-The _stylesheet_ item defines the name of the stylesheet used in the ebook:
+The _stylesheet_ item defines the name of the stylesheet used in the book:
 
     stylesheet:  stylesheet.css
 
-If the stylesheet  doesn't exist, the script uses Pandoc's default stylesheet.
+If the stylesheet doesn't exist, the script uses Pandoc's default stylesheet.
 
 The _title_ item has two types. The _main_ type specifies the main title of the book:
 
@@ -116,7 +116,7 @@ No subdirectories are allowed in the _pages_ directory.
 
 ### images/
 
-All the images embedded in the ebook, except for the cover image, must be placed in the _images_  directory. To insert an image into the text, use the following Markdown code:
+All the images embedded in the book, except for the cover image, must be placed in the _images_  directory. To insert an image into the text, use the following Markdown code:
 
 ```markdown
 ![](images/foo.jpg)
@@ -183,4 +183,4 @@ body {
 
 ### fonts
 
-The _fonts_ directory is used to store fonts embedded into the ebook. No subdirectories are allowed in this directory.
+The _fonts_ directory is used to store fonts embedded into the book. No subdirectories are allowed in this directory.
