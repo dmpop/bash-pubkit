@@ -1,23 +1,101 @@
 # Chapter 3
 
-Etiam in ante accumsan velit blandit elementum. Donec mattis odio ac varius mattis. Nunc dui elit, ultrices eu lorem a, venenatis interdum libero. Vestibulum varius ut dui quis vestibulum. Curabitur quis lacinia purus. Pellentesque non est non mi iaculis vehicula. Morbi sed justo et quam porta feugiat. Aenean mauris magna, dignissim eget ante eget, eleifend fringilla velit. Cras at pellentesque tortor, sit amet ullamcorper arcu. Nunc elementum a velit consequat fermentum. Sed a magna dignissim, vulputate sem et, aliquet nisl. Suspendisse potenti. Aliquam malesuada euismod porta. Nunc placerat orci ante, sed sollicitudin dolor ultrices ut.
+She did not answer for some time, but stood gazing at the landscape. "I wish I knew," she said at last.
 
-Vestibulum mollis erat eget nibh accumsan, sit amet posuere sapien molestie. Nulla facilisi. Maecenas sit amet nulla imperdiet orci sodales sodales id at tellus. Aenean pellentesque enim vitae dignissim molestie. Donec vel rutrum eros. Proin tristique elit a nibh ultrices gravida. Nullam pharetra aliquet justo vel aliquet. Mauris lorem arcu, molestie ac tristique porttitor, rutrum eget magna. Nulla gravida velit eu justo adipiscing, non rhoncus mi tristique. Aenean nibh risus, feugiat ut quam vel, blandit laoreet ipsum. Nam condimentum dignissim dignissim. Nam porttitor massa placerat massa malesuada luctus. Suspendisse potenti. Aliquam erat volutpat. Nam sit amet ullamcorper nisl, a convallis velit.
+He shook his head. "Knowledge would be fatal. It is the uncertainty that charms one. A mist makes things wonderful."
 
-Nam mattis dictum enim ut venenatis. Morbi at dignissim nulla. Sed id volutpat ipsum. Pellentesque lacus nulla, imperdiet et elit hendrerit, suscipit tincidunt dolor. Curabitur porta ac urna vel porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc et tristique dui, adipiscing viverra mi. Ut convallis fermentum dolor eu viverra. Proin elementum sapien vitae tortor placerat dapibus. Aliquam aliquam lacus a arcu suscipit posuere. Vivamus congue consectetur lorem, nec ultricies lorem tincidunt vel. Suspendisse volutpat tincidunt nulla.
+"One may lose one's way."
 
-## Subsection I
+"All ways end at the same point, my dear Gladys."
 
-Suspendisse dictum tortor id sem placerat, sit amet placerat sapien venenatis. Aenean non vulputate quam. Proin tempor, neque quis cursus consequat, enim dui faucibus nunc, ut consectetur ligula odio et tortor. Aliquam et lorem suscipit, congue metus eu, ornare nulla. Donec vitae eros justo. Suspendisse ac volutpat velit. In hac habitasse platea dictumst. Aenean eu pellentesque metus.
+"What is that?"
 
-Integer tristique lectus lectus, ac fringilla nibh posuere ac. Donec quis erat et purus porta aliquam. Vestibulum scelerisque nec orci vitae porttitor. Sed rhoncus eleifend ultrices. Nulla elementum tellus id elit rutrum, eu mollis magna tempor. Praesent gravida tempus nulla. In tincidunt libero nec erat iaculis, id dignissim turpis tempus. Sed condimentum posuere sapien eget luctus. In sit amet est turpis. Vestibulum placerat dolor et dolor tempus aliquam. Sed ut nulla sapien. Integer et nunc odio. In eleifend ante id nisi fringilla porta.
+"Disillusion."
 
-Sed hendrerit rutrum aliquam. Cras diam metus, imperdiet porttitor hendrerit sit amet, venenatis ac urna. Quisque sed imperdiet elit, quis placerat orci. Morbi non vestibulum purus. Nulla mi velit, volutpat sit amet fringilla vel, commodo interdum augue. Phasellus ipsum massa, placerat a erat ullamcorper, porta lobortis nulla. Nulla a hendrerit elit, vel interdum justo. Sed rutrum porta eros eget imperdiet. Cras egestas eu arcu in lacinia. Ut hendrerit vitae diam id mollis. Phasellus in sodales nunc, id ullamcorper sapien. Etiam id velit purus. In non felis nec risus aliquet interdum. Fusce pulvinar nisl sed augue bibendum placerat.
+"It was my debut in life," she sighed.
 
-Sed metus nibh, mattis quis enim a, euismod gravida ipsum. In faucibus fermentum massa vel ornare. Morbi varius diam sed enim interdum egestas. Nunc id mi egestas, ultrices ipsum et, tempus nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nisi neque, vehicula quis ornare a, blandit imperdiet neque. Vestibulum semper leo mauris, sed venenatis lectus semper varius. Donec mauris nunc, semper quis condimentum quis, posuere id leo. Mauris commodo dictum diam et tempor. Vivamus eu leo eu erat laoreet rhoncus quis eu quam. Integer venenatis porta felis. Cras nec tempus dolor, sodales laoreet elit. Cras porttitor nulla in sapien viverra elementum ac nec ligula. In placerat tempus justo vitae luctus.
+"It came to you crowned."
 
-## Subsection II
+"I am tired of strawberry leaves."
 
-Aliquam tempus sollicitudin augue nec laoreet. Quisque luctus ante magna, vel vehicula sem sagittis ut. Vestibulum ut nisl fringilla, dignissim quam id, interdum lectus. Maecenas laoreet bibendum ante. Praesent pulvinar augue vel nisi venenatis luctus. Praesent hendrerit consequat leo, sit amet auctor justo vehicula non. Nullam accumsan eu arcu vel sagittis. Proin tincidunt dapibus diam. Nulla tempor nulla sapien, vitae interdum massa suscipit ac.
+"They become you."
 
-Praesent volutpat, ante ac dignissim facilisis, sem ipsum dapibus purus, sed iaculis ligula lacus eget augue. Donec rhoncus augue quis velit laoreet adipiscing. Proin pulvinar rutrum ultrices. Aliquam metus lacus, tincidunt ac diam a, porttitor tincidunt est. Phasellus ullamcorper eget orci id semper. Duis feugiat enim neque, eu vestibulum neque egestas vitae. Morbi elementum tortor vel dignissim tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit fermentum interdum. Etiam et ipsum id nunc tempus eleifend. Maecenas hendrerit lectus sapien, et laoreet nibh ultrices sit amet. Duis ac tincidunt mauris. Suspendisse potenti. Nunc libero ipsum, fermentum sed dui at, porta interdum neque.
+"Only in public."
+
+"You would miss them," said Lord Henry.
+
+"I will not part with a petal."
+
+"Monmouth has ears."
+
+"Old age is dull of hearing."
+
+"Has he never been jealous?"
+
+"I wish he had been."
+
+He glanced about as if in search of something. "What are you looking for?" she inquired.
+
+"The button from your foil," he answered. "You have dropped it."
+
+She laughed. "I have still the mask."
+
+"It makes your eyes lovelier," was his reply.
+
+She laughed again. Her teeth showed like white seeds in a scarlet fruit.
+
+Upstairs, in his own room, Dorian Gray was lying on a sofa, with terror in every tingling fibre of his body. Life had suddenly become too hideous a burden for him to bear. The dreadful death of the unlucky beater, shot in the thicket like a wild animal, had seemed to him to pre-figure death for himself also. He had nearly swooned at what Lord Henry had said in a chance mood of cynical jesting.
+
+At five o'clock he rang his bell for his servant and gave him orders to pack his things for the night-express to town, and to have the brougham at the door by eight-thirty. He was determined not to sleep another night at Selby Royal. It was an ill-omened place. Death walked there in the sunlight. The grass of the forest had been spotted with blood.
+
+Then he wrote a note to Lord Henry, telling him that he was going up to town to consult his doctor and asking him to entertain his guests in his absence. As he was putting it into the envelope, a knock came to the door, and his valet informed him that the head-keeper wished to see him. He frowned and bit his lip. "Send him in," he muttered, after some moments' hesitation.
+
+As soon as the man entered, Dorian pulled his chequebook out of a drawer and spread it out before him.
+
+"I suppose you have come about the unfortunate accident of this morning, Thornton?" he said, taking up a pen.
+
+"Yes, sir," answered the gamekeeper.
+
+"Was the poor fellow married? Had he any people dependent on him?" asked Dorian, looking bored. "If so, I should not like them to be left in want, and will send them any sum of money you may think necessary."
+
+"We don't know who he is, sir. That is what I took the liberty of coming to you about."
+
+"Don't know who he is?" said Dorian, listlessly. "What do you mean? Wasn't he one of your men?"
+
+"No, sir. Never saw him before. Seems like a sailor, sir."
+
+The pen dropped from Dorian Gray's hand, and he felt as if his heart had suddenly stopped beating. "A sailor?" he cried out. "Did you say a sailor?"
+
+"Yes, sir. He looks as if he had been a sort of sailor; tattooed on both arms, and that kind of thing."
+
+"Was there anything found on him?" said Dorian, leaning forward and looking at the man with startled eyes. "Anything that would tell his name?"
+
+"Some money, sir--not much, and a six-shooter. There was no name of any kind. A decent-looking man, sir, but rough-like. A sort of sailor we think."
+
+Dorian started to his feet. A terrible hope fluttered past him. He clutched at it madly. "Where is the body?" he exclaimed. "Quick! I must see it at once."
+
+"It is in an empty stable in the Home Farm, sir. The folk don't like to have that sort of thing in their houses. They say a corpse brings bad luck."
+
+"The Home Farm! Go there at once and meet me. Tell one of the grooms to bring my horse round. No. Never mind. I'll go to the stables myself. It will save time."
+
+In less than a quarter of an hour, Dorian Gray was galloping down the long avenue as hard as he could go. The trees seemed to sweep past him in spectral procession, and wild shadows to fling themselves across his path. Once the mare swerved at a white gate-post and nearly threw him. He lashed her across the neck with his crop. She cleft the dusky air like an arrow. The stones flew from her hoofs.
+
+At last he reached the Home Farm. Two men were loitering in the yard. He leaped from the saddle and threw the reins to one of them. In the farthest stable a light was glimmering. Something seemed to tell him that the body was there, and he hurried to the door and put his hand upon the latch.
+
+There he paused for a moment, feeling that he was on the brink of a discovery that would either make or mar his life. Then he thrust the door open and entered.
+
+On a heap of sacking in the far corner was lying the dead body of a man dressed in a coarse shirt and a pair of blue trousers. A spotted handkerchief had been placed over the face. A coarse candle, stuck in a bottle, sputtered beside it.
+
+Dorian Gray shuddered. He felt that his could not be the hand to take the handkerchief away, and called out to one of the farm-servants to come to him.
+
+"Take that thing off the face. I wish to see it," he said, clutching at the door-post for support.
+
+When the farm-servant had done so, he stepped forward. A cry of joy broke from his lips. The man who had been shot in the thicket was James Vane.
+
+He stood there for some minutes looking at the dead body. As he rode home, his eyes were full of tears, for he knew he was safe. "There is no use your telling me that you are going to be good," cried Lord Henry, dipping his white fingers into a red copper bowl filled with rose-water. "You are quite perfect. Pray, don't change."
+
+Dorian Gray shook his head. "No, Harry, I have done too many dreadful things in my life. I am not going to do any more. I began my good actions yesterday."
+
+"Where were you yesterday?"
+
+"In the country, Harry. I was staying at a little inn by myself."
