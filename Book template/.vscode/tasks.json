@@ -1,14 +1,55 @@
 {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile EPUB",
+            "label": "Sync",
             "type": "shell",
-            "command": "${workspaceFolder}/run.sh",
-            "args": [
-                "${workspaceFolder}"
-            ],
+            "command": "git pull -r && git push && :",
+            "problemMatcher": []
+        },
+        {
+            "label": "Hist",
+            "type": "shell",
+            "command": "git hist",
+            "problemMatcher": []
+        },
+        {
+            "label": "Save",
+            "type": "shell",
+            "command": "git add -A && git commit -m \"${input:msg}\" && git config remote.origin.url && git push && :",
+            "problemMatcher": []
+        },
+        {
+            "label": "Redo",
+            "type": "shell",
+            "command": "git add -A && git commit --amend --no-edit && git config remote.origin.url && git push -f && :",
+            "problemMatcher": []
+        },
+        {
+            "label": "!!Undo",
+            "type": "shell",
+            "command": "git revert --no-edit \"${input:hash}\" && git config remote.origin.url && git push",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "compile.sh \"${workspaceFolder}\"",
             "problemMatcher": []
         }
+    ],
+    "inputs": [
+        {
+            "id": "msg",
+            "description": "Description:",
+            "default": "Yet another revision",
+            "type": "promptString"
+        },
+        {
+            "id": "hash",
+            "description": "Hash:",
+            "default": "",
+            "type": "promptString"
+        },
     ]
 }
