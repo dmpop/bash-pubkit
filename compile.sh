@@ -104,13 +104,13 @@ for BOOK_DIR; do
     done
     # Append arguments to the Pandoc command
     BOOK_TITLE=$(basename "$BOOK_DIR")
-    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$BOOK_TITLE.epub" --toc $LIST_OF_FONTS
+    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$BOOK_DIR/$BOOK_TITLE.epub" --toc $LIST_OF_FONTS
   else
-    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$HOME/$BOOK_TITLE.epub" --toc
+    awk 'FNR==1{print ""}1' metadata.md "$PAGES_DIR"/*.md | pandoc -o "$BOOK_DIR/$BOOK_TITLE.epub" --toc
   fi
 
   # Check if EPUB was created
-  if [ -f "$HOME/$BOOK_TITLE.epub" ]; then
+  if [ -f "$BOOK_DIR/$BOOK_TITLE.epub" ]; then
     echo
     echo $TAG "$BOOK_TITLE.epub compiled successfully."
   else
