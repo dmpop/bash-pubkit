@@ -14,7 +14,7 @@ $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a
 
 <head>
 	<meta charset="utf-8">
-	<title>EPUB Compiler</title>
+	<title>ZIP to EPUB</title>
 	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href="css/classless.css">
 	<link rel="stylesheet" href="css/themes.css">
@@ -40,7 +40,7 @@ $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a
 	?>
 	<div style="text-align: center;">
 		<img style="display: inline; height: 2.5em; vertical-align: middle;" src="favicon.svg" alt="logo" />
-		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #ffaaeeff;">EPUB Compiler</h1>
+		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #ffaaeeff;">ZIP to EPUB</h1>
 		<p style="color: lightgray; margin-bottom: 1.5em;">Current upload limit is <u><?php echo $upload_mb; ?>MB</u></p>
 	</div>
 
@@ -69,7 +69,7 @@ $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a
 					Download the resulting EPUB file.
 				</li>
 			</ol>
-			<p class="text-center">EPUB Compiler is part of <a href="https://github.com/dmpop/bash-pubkit">Bash Pubkit</a></p>
+			<p class="text-center">ZIP to EPUB is part of <a href="https://github.com/dmpop/bash-pubkit">Bash Pubkit</a></p>
 		</details>
 	</div>
 	<p class="text-center"><?php echo $footer ?></p>

@@ -1,10 +1,10 @@
 [Unit]
-Description=EPUB Compiler
+Description=ZIP to EPUB
 Wants=syslog.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/php -S 0.0.0.0:8000 -t /path/to/bash-pubkit/server
+ExecStart=/usr/bin/php -S 0.0.0.0:8000 -t /path/to/bash-pubkit/zip-to-epub
 ExecStop=/usr/bin/kill -HUP $MAINPID
 
 [Install]
