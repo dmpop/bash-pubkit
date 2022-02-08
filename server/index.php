@@ -1,6 +1,8 @@
 <?php
 // Theme (light, dark, sepia)
-$theme = "dark";
+$theme = "light";
+// Password
+$password = "password";
 // Footer
 $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a>";
 ?>
@@ -45,8 +47,12 @@ $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a
 	<div class="card">
 
 		<form style="margin-top: 1em;" action=" " method="POST" enctype="multipart/form-data">
-			<label for="fileToUpload">Select ZIP file:</label>
-			<input style="margin-bottom: 1.5em; margin-top: 0.5em;" type="file" name="fileToUpload" id="fileToUpload">
+			<label>Select ZIP file:
+				<input style="margin-bottom: 1.5em; margin-top: 0.5em;" type="file" name="fileToUpload" id="fileToUpload">
+			</label>
+			<label>Password:
+				<input type="password" name="password">
+			</label>
 			<button style="margin-bottom: 1.5em;" type="submit" name="compile">Compile</button>
 		</form>
 
@@ -68,7 +74,7 @@ $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a
 	</div>
 	<p class="text-center"><?php echo $footer ?></p>
 	<?php
-	if (isset($_POST["compile"])) {
+	if (isset($_POST["compile"]) && ($_POST['password'] == $password)) {
 		$target_file = "upload/" . basename($_FILES["fileToUpload"]["name"]);
 		$upload_ok = 1;
 		$file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -98,10 +104,6 @@ $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a
 				header('Content-type: file/epub');
 				header('Content-Disposition: attachment; filename="upload/' . $dir . DIRECTORY_SEPARATOR . $dir . '.epub"');
 				readfile("upload/" . $dir . DIRECTORY_SEPARATOR . $dir . ".epub");
-			} else {
-				echo "<script>";
-				echo 'alert("Error uploading the file.")';
-				echo "</script>";
 			}
 		}
 	}
