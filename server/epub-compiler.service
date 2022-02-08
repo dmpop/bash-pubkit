@@ -1,0 +1,11 @@
+[Unit]
+Description=EPUB Compiler
+Wants=syslog.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/php -S 0.0.0.0:8000 -t /path/to/bash-pubkit/server
+ExecStop=/usr/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
