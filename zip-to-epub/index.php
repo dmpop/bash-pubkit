@@ -33,10 +33,8 @@ $footer = "This is <a href='https://github.com/dmpop/bash-pubkit'>Bash Pubkit</a
 	$max_post = (int)(ini_get('post_max_size'));
 	$memory_limit = (int)(ini_get('memory_limit'));
 	$upload_mb = min($max_upload, $max_post, $memory_limit);
-	if (file_exists('upload')) {
-		shell_exec("rm -rf upload");
-		mkdir('upload', 0777, true);
-	}
+	shell_exec("rm -rf upload");
+	mkdir('upload', 0777, true);
 	?>
 	<div style="text-align: center;">
 		<img style="display: inline; height: 2.5em; vertical-align: middle;" src="favicon.svg" alt="logo" />
